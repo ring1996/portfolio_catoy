@@ -1,0 +1,125 @@
+//////////////////////////////////////////////////
+// Settings
+//
+
+// fonts
+$font-jp: 'Noto Sans JP', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-en: 'Pacifico', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size: 1.6rem;
+$font-weight: 400;
+$line-height-ttl: 1.8;
+$line-height-txt: 2.1;
+$letter-spacing: 0.05em;
+
+// Basic colors
+$color-txt:#2d2421;
+$color-txt-sub1: #9b908c;
+$color-txt-sub2: #cec6c3;
+$color-txt-sub3: #fff;
+$color-main: #f7785e;
+$color-bg1: #fff;
+$color-bg2: #faf4f2;
+$color-bg3: #e3d5d1;
+$color-bg4: #fadbd4;
+
+// Parts colors
+$color-header-bg: $color-bg1;
+$color-footer-txt: $color-txt-sub2;
+$color-footer-bg: $color-txt;
+$color-crumbs-txt: $color-txt;
+$color-crumbs-bg: $color-bg3;
+
+$color-pagination-bg-normal: $color-bg1;
+$color-pagination-txt-normal: $color-main;
+$color-pagination-bg-current: $color-main;
+$color-pagination-txt-current: $color-txt-sub3;
+$color-pagination-bg-hover: $color-bg4;
+$color-pagination-txt-hover: $color-main;
+
+// sns
+$color-facebook:#3b5998;
+$color-twitter:#55acee;
+$color-google:#dd4b39;
+$color-hatena:#008fde;
+$color-line:#00b900;
+
+$header-height-sp: 64px;
+
+// breakpoints
+$breakpoints: (
+	'xxs-1': '374px',
+	'xxs': '375px',
+	'xs': '576px',
+	'sm': '767px',
+	'md': '1024px',
+	'md+1': '1025px',
+	'lg': '1280px',
+	'xl': '1920px'
+) !default;
+
+@mixin media($type, $bp1, $bp2:0) {
+	@if ($type == min) {
+		@media screen and (min-width: #{map-get($breakpoints, $bp1)}) {
+			@content;
+		}
+	} @else if ($type == max) {
+		@media screen and (max-width: #{map-get($breakpoints, $bp1)}) {
+			@content;
+		}
+	} @else if ($type == between) {
+		@media screen and (min-width: #{map-get($breakpoints, $bp1)}) and (max-width: #{map-get($breakpoints, $bp2)}) {
+			@content;
+		}
+	}
+}
+
+// mixin
+@mixin btn-reset {
+	border: none;
+	background-image: none;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin hover-opacity {
+	transition: opacity ease-out 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+@mixin fontAwesome5($content, $type:solid) { //$type solid/regular/brands
+	content: $content;
+	@if $type == solid {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+	} @else if $type == regular {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 400;
+	} @else if $type == brands {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+	}
+}
+
+@mixin img-aspect-fit($w, $h) {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: ($h / $w) * 100%;
+  }
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

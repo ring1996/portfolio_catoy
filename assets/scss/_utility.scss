@@ -1,0 +1,111 @@
+/*==================================================
+
+** Utility
+==================================================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-txt;
+  font-family: $font-jp;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+p,
+blockquote,
+address,
+small,
+dt,
+dd,
+li,
+th,
+td,
+td,
+span {
+  line-height: $line-height-txt;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $line-height-ttl;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1020px;
+  &--sec {
+    @extend .wrap;
+    padding: 58px 0;
+  }
+  &--l {
+    @extend .wrap;
+    max-width: 1920px;
+  }
+}
+
+@include media(min, sm) {
+  .wrap {
+    &--sec {
+      padding: 76px 0;
+    }
+  }
+} // media(min, sm)
+
+@include media(min, md) {
+  .wrap {
+    &--sec {
+      padding: 86px 0 100px;
+    }
+    &--l {
+      width: 100%;
+    } // utility
+  }
+} // media(min, md)
+
+.marker {
+  background: linear-gradient(
+    transparent 58.33333%,
+    rgba($color-main, 0.5) 58.33333%
+  );
+  padding: 0 5px;
+}
+
+.bg-beige {
+  background-color: $color-bg2;
+}
+
+@include media(max, sm) {
+  .sp-none {
+    display: none;
+    vertical-align: bottom;
+  }
+}
+
+@include media(between, sm, md) {
+  .tab-none {
+    display: none;
+  }
+}
+
+@include media(min, md) {
+  .pc-none {
+    display: none;
+  }
+}

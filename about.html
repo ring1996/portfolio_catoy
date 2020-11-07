@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="email=no, telephone=no, address=no">
+
+  <!-- Site -->
+  <title>会社案内 | Catoy</title>
+  <meta name="description" content="Catoyの会社案内を説明する文章が入ります">
+
+  <!-- SNS -->
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Twitterユーザー名">
+	<meta property="og:site_name" content="Catoy">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ページのタイトル">
+	<meta property="og:description" content="記事の抜粋">
+	<meta property="og:image" content="画像のURL">
+  <meta property="og:url" content="ページのURL">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/icon-192x192.png">
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="/assets/css/fontawesome5-all.min.css">
+
+  <!-- StyleSheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://catoy.rikukamimura-portfolio.com/about.html/>
+
+  <!-- NoIndex -->
+  <meta name=”robots” content=”noindex”>
+
+</head>
+<body id="about">
+  <!-- header -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/header.html");
+  ?><!-- /header -->
+  <!-- main -->
+  <main class="main">
+    <div class="pagettl">
+      <div class="wrap">
+        <h1 class="pagettl__ttl" data-pagettl="About us">会社案内</h1>
+      </div>
+    </div>
+    <!-- outline -->
+    <section class="outline">
+      <div class="wrap--sec">
+        <h2 class="secttl" data-secttl="Outline"><span class="marker">会社概要</span></h2>
+        <table>
+          <tr>
+            <th>会社名</th>
+            <td>株式会社キャットイ</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>令和元年5月</td>
+          </tr>
+          <tr>
+            <th>代表</th>
+            <td>代表取締役 ジータ</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>〒542-0002 <br class="sp">大阪府大阪市中央区大阪城1-1</td><!-- tabサイズ以降はbrをdisplay: none; -->
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>0120-123-456</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>ペット用品の企画・開発・販売 ／ 講習会の開催  ／ イベントの運営</td>
+          </tr>
+        </table>
+      </div>
+    </section><!-- /outline -->
+    <!-- access -->
+    <section class="access bg-beige">
+      <div class="wrap--sec">
+        <h2 class="secttl" data-secttl="Access"><span class="marker">アクセス</span></h2>
+        <div class="access__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7661603987235!2d135.52442891517723!3d34.68585079152117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0cd6ae00743%3A0xd3a0f38680973a56!2z44CSNTQwLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65aSn6Ziq5Z-O77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1595328903557!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </section><!-- access -->
+    <!-- crumbs -->
+    <div class="crumbs">
+      <div class="wrap">
+        <ul class="crumbs__list">
+          <li class="crumbs__item"><a href="/index.html" class="txtlink"><i class="fas fa-home"></i></a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+        </ul>
+      </div>
+    </div><!-- /crumbs -->
+  </main><!-- /main -->
+  <!-- footer -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/footer.html");
+  ?><!-- /footer -->
+  <!-- js -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/js.html");
+  ?><!-- /js -->
+</body>
+</html>

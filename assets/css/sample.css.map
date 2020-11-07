@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,OADK,CACL,KAAK,CAAC;EACJ,gBAAgB,EAAE,OAAO;CAC1B;;AAHH,AAIE,OAJK,CAIL,KAAK,CAAC;EACJ,KAAK,EAAE,GAAG;CASX;;AAPS,AAAA,OAAO,AAAA,UAAU,CAAC,KAAK,CAAgC;EAC7D,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "../../_sass-parent-class-sample/sample.scss"
+    ],
+    "names": [],
+    "file": "sample.css"
+}

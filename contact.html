@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="email=no, telephone=no, address=no">
+
+  <!-- Site -->
+  <title>お問い合わせ | Catoy</title>
+  <meta name="description" content="Catoyを説明する文章が入ります">
+
+  <!-- SNS -->
+  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Twitterユーザー名">
+	<meta property="og:site_name" content="Catoy">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ページのタイトル">
+	<meta property="og:description" content="記事の抜粋">
+	<meta property="og:image" content="画像のURL">
+  <meta property="og:url" content="ページのURL">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/icon-192x192.png">
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="/assets/css/fontawesome5-all.min.css">
+
+  <!-- メールフォームプロCGI -->
+  <link rel="stylesheet" href="/assets/mfp/mfp.statics/mailformpro.css">
+
+  <!-- StyleSheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://catoy.rikukamimura-portfolio.com/contact.html/">
+
+  <!-- NoIndex -->
+  <meta name=”robots” content=”noindex”>
+
+</head>
+<body id="contact">
+  <!-- header -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/header.html");
+  ?><!-- /header -->
+  <!-- main -->
+  <main class="main">
+    <div class="pagettl">
+      <div class="wrap">
+        <h1 class="pagettl__ttl" data-pagettl="Contact">お問い合わせ</h1>
+      </div>
+    </div>
+    <section class="email">
+      <div class="wrap--sec">
+        <h2 class="secttl" data-secttl="Email"><span class="marker">メールでお問い合わせ</span></h2>
+        <p class="email__text"><i class="fas fa-paw"></i>は必須入力項目です。</p>
+        <form class="email__form" id="mailformpro" action="/assets/mfp/mailformpro/mailformpro.cgi" method="POST">
+          <div class="email__unit">
+            <label for="form-company" class="form-label-ttl">会社名</label>
+            <input type="text" id="form-company" class="form-input-text" name="会社名">
+          </div>
+          <div class="email__unit">
+            <label for="form-name" class="form-label-ttl">お名前<i class="fas fa-paw"></i></label>
+            <input type="text" id="form-name" class="form-input-text" name="お名前" data-kana="フリガナ" required="required">
+          </div>
+          <div class="email__unit">
+            <label for="form-furigana" class="form-label-ttl">フリガナ<i class="fas fa-paw"></i></label>
+            <input type="text" id="form-furigana" class="form-input-text" name="フリガナ" required="required" data-charcheck="kana">
+          </div>
+          <div class="email__unit">
+            <label for="form-email" class="form-label-ttl">メールアドレス<i class="fas fa-paw"></i></label>
+            <input type="email" id="form-email" class="form-input-text" name="email" required="required">
+          </div>
+          <div class="email__unit email__unit--textarea">
+            <label for="form-detail" class="form-label-ttl">お問い合わせ内容<i class="fas fa-paw"></i></label>
+            <textarea id="form-detail" class="form-textarea" name="お問い合わせ内容" required="required"></textarea>
+          </div>
+          <button type="submit" class="btn">送信する</button>
+        </form>
+        <script type="text/javascript" id="mfpjs" src="/assets/mfp/mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+      </div><!-- /wrap -->
+    </section><!-- /email -->
+    <section class="telephone bg-beige">
+      <div class="wrap--sec">
+        <h2 class="secttl" data-secttl="Telephone"><span class="marker">お電話でお問い合わせ</span></h2>
+        <div class="telephone__inner">
+          <p class="telephone__number">0120-123-456</p>
+          <p class="telephone__time">営業時間 9:00〜17:00</p>
+          <p class="telephone__holiday">定休日 土日祝</p>
+        </div>
+      </div><!-- /wrap -->
+    </section><!-- /telephone -->
+    <!-- crumbs -->
+    <div class="crumbs">
+      <div class="wrap">
+        <ul class="crumbs__list">
+          <li class="crumbs__item"><a href="/index.html" class="txtlink"><i class="fas fa-home"></i></a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+          <li class="crumbs__item"><a href="#" class="txtlink">ページタイトル</a></li>
+        </ul>
+      </div>
+    </div><!-- /crumbs -->
+  </main><!-- /main -->
+  <!-- footer -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/footer.html");
+  ?><!-- /footer -->
+  <!-- js -->
+  <?php
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  include($webroot."/assets/inc/js.html");
+  ?><!-- /js -->
+</body>
+</html>

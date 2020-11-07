@@ -1,0 +1,12 @@
+#sample .list {
+  background-color: #cccccc;
+}
+
+#sample .item {
+  color: red;
+}
+
+#sample.is-active .item {
+  color: blue;
+}
+/*# sourceMappingURL=sample.css.map */
